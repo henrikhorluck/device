@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="go build device/apiserver" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <module name="device" />
+    <working_directory value="$PROJECT_DIR$" />
+    <go_parameters value="-i" />
+    <parameters value="--db-connection-uri=postgresql://postgres:postgres@localhost/postgres --bind-address=127.0.0.1:8080 --config-dir=./apiserver_tempdir --development-mode=true --prometheus-address=127.0.0.1:3000 --credential-entries=&quot;nais:device,gateway-1:password&quot;" />
+    <envs>
+      <env name="confdir_dyn" value="&quot;$(mktemp -d)&quot;" />
+      <env name="confdir_static" value="./apiserver_tempdir" />
+    </envs>
+    <kind value="FILE" />
+    <filePath value="$PROJECT_DIR$/cmd/apiserver/main.go" />
+    <package value="github.com/nais/device/cmd/apiserver" />
+    <directory value="$PROJECT_DIR$" />
+    <method v="2" />
+  </configuration>
+</component>
